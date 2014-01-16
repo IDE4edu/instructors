@@ -11,7 +11,7 @@ import org.eclipse.ui.handlers.HandlerUtil;
 
 import edu.berkeley.eduride.editoroverlay.BoxConstrainedEditorOverlay;
 
-public class BCEOCreateHandler implements IHandler2 {
+public class BCEODeleteHandler implements IHandler2 {
 
 	@Override
 	public void addHandlerListener(IHandlerListener handlerListener) {
@@ -40,13 +40,11 @@ public class BCEOCreateHandler implements IHandler2 {
 			BoxConstrainedEditorOverlay evkl = BoxConstrainedEditorOverlay.ensureInstalled(editor);
 			//evkl won't be null because we already check shouldInstall
 			
-			//TODO: Make sure evkl won't be null on non-ISA files!
-			
-			if (!evkl.isTurnedOn()) {
+			if (!evkl.isTurnedOn()) {  //don't delete if we can't see what we're doing
 				evkl.toggle();
+			} else {
+				evkl.deleteMarker();
 			}
-			
-			evkl.createMarkers();
 		}
 		return null;
 	}

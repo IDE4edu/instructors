@@ -10,6 +10,15 @@
             id="edu.berkeley.eduride.authoringPlugin.create"
             name="create">
       </command>
+      
+      <command
+            category="BCEOAuthoring"
+            categoryId="edu.berkeley.eduride.authoringPlugin.category1"
+            defaultHandler="handlers.BCEODeleteHandler"
+            id="edu.berkeley.eduride.authoringPlugin.delete"
+            name="create">
+      </command>
+      
       <category
             id="edu.berkeley.eduride.authoringPlugin.category1"
             name="BCEOAuthoring">
@@ -17,6 +26,21 @@
    </extension>
    <extension
          point="org.eclipse.ui.menus">
+         
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="edu.berkeley.eduride.toolbars.main">
+            <command
+                  commandId="edu.berkeley.eduride.editorOverlay.toggleBoxes"
+                  icon="icons/boxMenuIcon.png"
+                  label="Toggle Boxes"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
+         
       <menuContribution
             allPopups="false"
             locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
@@ -24,12 +48,27 @@
                id="edu.berkeley.eduride.toolbars.main">
             <command
                   commandId="edu.berkeley.eduride.authoringPlugin.create"
-                  icon="icons/boxMenuIcon.png"
-                  label="Create Box on Selection"
+                  icon="icons/authoringAddBox.png"
+                  label="Create Box on Current Selection"
                   style="push">
             </command>
          </toolbar>
       </menuContribution>
+      
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="edu.berkeley.eduride.toolbars.main">
+            <command
+                  commandId="edu.berkeley.eduride.authoringPlugin.delete"
+                  icon="icons/authoringDelBox.png"
+                  label="Delete Box Cursor is in"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
+      
    </extension>
 
 </plugin>
