@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            category="BCEOAuthoring"
+            categoryId="edu.berkeley.eduride.authoringPlugin.category1"
+            defaultHandler="handlers.BCEOCreateHandler"
+            id="edu.berkeley.eduride.authoringPlugin.create"
+            name="create">
+      </command>
+      <category
+            id="edu.berkeley.eduride.authoringPlugin.category1"
+            name="BCEOAuthoring">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="edu.berkeley.eduride.toolbars.main">
+            <command
+                  commandId="edu.berkeley.eduride.authoringPlugin.create"
+                  icon="icons/boxMenuIcon.png"
+                  label="Create Box on Selection"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
 
 </plugin>
