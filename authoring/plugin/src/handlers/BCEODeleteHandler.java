@@ -8,7 +8,6 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
-
 import edu.berkeley.eduride.editoroverlay.BoxConstrainedEditorOverlay;
 
 public class BCEODeleteHandler implements IHandler2 {

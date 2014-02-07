@@ -6,6 +6,7 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: edu.berkeley.eduride.authoringplugin.AuthoringActivator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- edu.berkeley.eduride.editorOverlay;bundle-version="1.0.0"
+ edu.berkeley.eduride.editorOverlay;bundle-version="1.0.0",
+ org.eclipse.core.resources
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
