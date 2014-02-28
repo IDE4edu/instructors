@@ -47,6 +47,10 @@ public class BCEOCreateHandler implements IHandler2 {
 			}
 			
 			evkl.createMarkers();
+			
+			if (!evkl.isTurnedOn()) {  //If we have no boxes and toggle, it won't turn on.  This check is for first boxes
+				evkl.toggle();
+			}
 		}
 		return null;
 	}
