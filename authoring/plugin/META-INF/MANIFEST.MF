@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: AuthoringPlugin
 Bundle-SymbolicName: edu.berkeley.eduride.authoringPlugin;singleton:=true
-Bundle-Version: 1.0.3
+Bundle-Version: 1.0.3.qualifier
 Bundle-Activator: edu.berkeley.eduride.authoringplugin.AuthoringActivator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
