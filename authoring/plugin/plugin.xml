@@ -19,6 +19,14 @@
             name="create">
       </command>
       
+      <command
+            category="BCEOAuthoring"
+            categoryId="edu.berkeley.eduride.authoringPlugin.category1"
+            defaultHandler="handlers.BCEOExportMarkersHandler"
+            id="edu.berkeley.eduride.authoringPlugin.export"
+            name="create">
+      </command>
+      
       <category
             id="edu.berkeley.eduride.authoringPlugin.category1"
             name="BCEOAuthoring">
@@ -69,6 +77,19 @@
          </toolbar>
       </menuContribution>
       
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="edu.berkeley.eduride.toolbars.main">
+            <command
+                  commandId="edu.berkeley.eduride.authoringPlugin.export"
+
+                  label="Generate XML"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
    </extension>
 
 </plugin>
