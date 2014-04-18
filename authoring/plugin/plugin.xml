@@ -22,7 +22,7 @@
       <command
             category="BCEOAuthoring"
             categoryId="edu.berkeley.eduride.authoringPlugin.category1"
-            defaultHandler="handlers.BCEOExportMarkersHandler"
+            defaultHandler="handlers.ExportEduRideXMLHandler"
             id="edu.berkeley.eduride.authoringPlugin.export"
             name="create">
       </command>

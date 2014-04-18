@@ -10,5 +10,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.resources
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Import-Package: org.eclipse.jdt.internal.corext.refactoring.util,
+Import-Package: edu.berkeley.eduride.base_plugin.util,
+ org.eclipse.jdt.internal.corext.refactoring.util,
  org.eclipse.ui.ide
