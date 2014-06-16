@@ -73,13 +73,15 @@ public class ExportEduRideXMLHandler implements IHandler2 {
 	
 	
 	private String generateEduRideXML(IResource res) {
-		String xml = "<eduRideSource>\n";
+		String xml = "<eduridefile>\n";
 		
-		String path = (res.getLocation()).toPortableString();  //should return OS independent path?
-		//String path = (res.getLocationURI()).toString();  //URI version
-		//might want makeRelativeTo
-		//ResourcesPlugin.getWorkspace().getRoot().getFile(path);
-		xml += "\t<file>" + path + "</file>\n";	
+		//String path = (res.getLocation()).toPortableString();  //too much information
+		String path = (res.getFullPath()).toPortableString();
+		
+		//TODO: might need path to start with /src/ instead of the project name, hacky fix if we need it:
+		//if (path.contains("/src/")) { path = path.substring(path.indexOf("/src/"), path.length()); }
+		
+		xml += "\t<source>" + path + "</source>\n";	
 		
 		String markerInfo = BoxConstrainedEditorOverlay.exportMarkers(res);
 		xml += markerInfo;
@@ -87,7 +89,7 @@ public class ExportEduRideXMLHandler implements IHandler2 {
 		String base64 = stringToBase64(getContents((IFile)res));
 		xml += "\t<base64>" + base64 + "</base64>\n";
 		
-		xml += "</eduRideSource>";
+		xml += "</eduridefile>";
 		return xml;
 	}
 
